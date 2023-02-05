@@ -1,0 +1,48 @@
+.balance-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+.money-detail {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  height: 140px;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecfccb;
+  border: 1px solid #84cc16;
+}
+
+.amount-card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.balance-image {
+  height: 65px;
+}
+.amount {
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.amount-para {
+  font-size: 18px;
+  margin: 0;
+}
+.income {
+  background-color: #ede9fe;
+  border: 1px solid #0b69ff;
+}
+.expense {
+  background-color: #ede9fe;
+  border: 1px solid #0b69ff;
+  margin-right: 0;
+}
