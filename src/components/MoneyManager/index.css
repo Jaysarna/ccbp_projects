@@ -93,3 +93,9 @@
   border: none;
   outline: none;
 }
+
+@media (max-width: 786px) {
+  .bg-container {
+    margin: 20px 10px;
+  }
+}

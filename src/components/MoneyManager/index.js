@@ -22,6 +22,20 @@ const transactionTypeOptions = [
 class MoneyManager extends Component {
   state = {amount: '', title: '', type: 'Income', transactionList: []}
 
+  componentDidMount() {
+    const storedTransactionList = localStorage.getItem('transactionList')
+    if (storedTransactionList) {
+      this.setState({transactionList: JSON.parse(storedTransactionList)})
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const {transactionList} = this.state
+    if (transactionList !== prevState.transactionList) {
+      localStorage.setItem('transactionList', JSON.stringify(transactionList))
+    }
+  }
+
   createTransaction = e => {
     e.preventDefault()
     const {amount, title, type} = this.state
@@ -67,7 +81,7 @@ class MoneyManager extends Component {
     return (
       <div className="bg-container">
         <div className="profile-card">
-          <h1 className="profile-head">Hi,Richard</h1>
+          <h1 className="profile-head">Hi,User</h1>
           <p className="profile-para">
             Welcome back to your <span className="app-name">Money Manger</span>
           </p>
